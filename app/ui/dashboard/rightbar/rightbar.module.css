@@ -1,0 +1,65 @@
+.container {
+  position: sticky;
+}
+
+.item {
+  position: relative;
+  background: linear-gradient(to top, #d1d5db, #f3f4f6);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.bgContainer {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.bg {
+  object-fit: contain;
+  opacity: 0.2;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.notification {
+  font-weight: bold;
+  color: var(--textSoft);
+}
+.title {
+  color: var(-text);
+  font-size: 18px;
+  font-weight: 500;
+}
+.subtitle {
+  font-size: 13px;
+  color: var(--textSoft);
+}
+
+.description {
+  color: var(--textSoft);
+  font-size: 14px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+  gap: 10px;
+  font-size: 15px;
+  padding: 10px;
+  background-color: var(--skyBlue);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}

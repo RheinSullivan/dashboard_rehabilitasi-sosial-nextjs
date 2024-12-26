@@ -1,0 +1,82 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.addButton {
+  cursor: pointer;
+  background-color: var(--skyBlue);
+  color: var(--bg);
+  padding: 10px;
+  color: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.pendataan {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userImage {
+  object-fill: cover;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.status {
+  font-size: 14px;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cencelled {
+  background-color: var(--redSoft);
+}
+
+.pending {
+  background-color: var(--skyBlue);
+}
+
+.done {
+  background-color: var(--greenSoft);
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+}
+
+.view {
+  background-color: var(--skyBlue);
+}
+
+.delete {
+  background-color: var(--redSoft);
+}

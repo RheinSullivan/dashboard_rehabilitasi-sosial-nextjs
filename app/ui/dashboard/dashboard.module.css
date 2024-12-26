@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+}
+
+.menu {
+  background-color: var(--bgSoft);
+  flex: 1;
+  padding: 20px;
+  height: 100;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 4;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 20px;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.side {
+  flex: 1;
+}

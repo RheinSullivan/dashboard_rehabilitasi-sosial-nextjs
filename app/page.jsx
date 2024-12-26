@@ -1,7 +1,11 @@
-const Homepage = () => {
-  return (
-    <div>Homepage</div>
-  )
-}
+import React from "react";
 
-export default Homepage
+const Page = () => {
+  return (
+    <main>
+      <h1>Selamat Datang di website clone Dinas Sosial, Kab. Cirebon  </h1>
+    </main>
+  );
+};
+
+export default Page;

@@ -1,0 +1,28 @@
+:root {
+  --bg: #e5e7eb;
+  --bgSoft: #f9fafb;
+  --text: #030712;
+  --textSoft: #71717a;
+  --textBlue: #1d4ed8;
+  --active: #d3d5d8;
+  --skyBlue: #0ea5e9;
+  --greenSoft: #84cc16;
+  --redSoft: #ef4444;
+  --grey: #9ca3af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
