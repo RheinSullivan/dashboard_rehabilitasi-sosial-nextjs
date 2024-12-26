@@ -4,7 +4,7 @@ import { connectToDB } from "./utils";
 export const fecthUser = async (search, pages) => {
   const regex = new RegExp(search, "i");
 
-  const itemsPerpages = 2;
+  const itemsPerpages = 5;
 
   try {
     connectToDB();

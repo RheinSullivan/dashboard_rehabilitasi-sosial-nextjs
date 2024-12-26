@@ -12,7 +12,7 @@ const Pagination = ({ count }) => {
   const pages = searchParams.get("pages") || 1;
   
   const params = new URLSearchParams(searchParams);
-  const itemsPerpages = 2;
+  const itemsPerpages = 5;
 
   const hasPrev = itemsPerpages * (parseInt(pages) - 1) > 0;
   const hasNext = itemsPerpages * (parseInt(pages) - 1) + itemsPerpages < count;

@@ -1,14 +1,28 @@
-.footer {
-  left: 0;
-  margin-top: 20px;
-  text-align: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  color: var(--textSoft);
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.text span {
+  color: var(--textBlue);
+  text-decoration: underline;
   font-weight: bold;
   font-style: italic;
-  font-size: 16px;
-  color: var(--textSoft);
 }
 
 .author {
   color: #ff0000;
-  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
 }
