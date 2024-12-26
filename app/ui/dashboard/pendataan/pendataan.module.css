@@ -37,7 +37,8 @@
   gap: 10px;
 }
 
-.userImage {
+.pendataanImage {
+  border-radius: 50%;
   object-fill: cover;
 }
 
@@ -53,7 +54,7 @@
   border-radius: 5px;
 }
 
-.cencelled {
+.cancelled {
   background-color: var(--redSoft);
 }
 

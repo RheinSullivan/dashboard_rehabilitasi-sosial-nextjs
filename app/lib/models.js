@@ -37,13 +37,11 @@ const userSchema = new mongoose.Schema(
 
 const pendataanSchema = new mongoose.Schema(
   {
+    img: {
+      type: String,
+    },
     casedata: {
       type: String,
-      required: true,
-    },
-    cat: {
-      type: String,
-      enum: ["bantuan", "layanan", "kasus"],
       required: true,
     },
     reporter: {
@@ -59,11 +57,8 @@ const pendataanSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["done", "pending", "cancelled"],
-      default: "pending",
-    },
-    description: {
-      type: String,
+      enum: ["Done", "Pending", "Cancelled"],
+      default: "Pending",
     },
   },
   { timestamps: true }

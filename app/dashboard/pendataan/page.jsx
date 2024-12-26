@@ -4,8 +4,13 @@ import Search from "@/app/ui/dashboard/search/search";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Link from "next/link";
 import Image from "next/image";
+import { fecthPendataan } from "@/app/lib/data";
 
-const Pendataan = () => {
+const Pendataan = async ({ searchParams }) => {
+  const search = searchParams?.search || "";
+  const pages = searchParams?.pages || 1;
+  const { pendataan, count } = await fecthPendataan(search, pages);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -26,53 +31,33 @@ const Pendataan = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <div className={styles.pendataan}>
-                <Image src="/noimage.png" alt="Profile" className={styles.userImage} height={60} width={60} />
-                Korupsi Dana
-              </div>
-            </td>
-            <td>Zidan Koirul R.</td>
-            <td>35.08.2023</td>
-            <td>Cilacap</td>
-            <td>
-              <span className={`${styles.done} ${styles.status}`}>Done</span>
-            </td>
-            <td>
-              <div className={styles.buttons}>
-                <Link href="/dashboard/pendataan/test">
-                  <button className={`${styles.view} ${styles.button}`}>View</button>
-                </Link>
-                <button className={`${styles.delete} ${styles.button}`}>Done</button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div className={styles.pendataan}>
-                <Image src="/noimage.png" alt="Profile" className={styles.userImage} height={60} width={60} />
-                KDRT dengan Sakura
-              </div>
-            </td>
-            <td>Imanda</td>
-            <td>32.11.2025</td>
-            <td>Cirebon</td>
-            <td>
-              <span className={`${styles.cencelled} ${styles.status}`}>Cencelled</span>
-            </td>
-            <td>
-              <div className={styles.buttons}>
-                <Link href="/">
-                  <button className={`${styles.view} ${styles.button}`}>View</button>
-                </Link>
-                <button className={`${styles.delete} ${styles.button}`}>Delete</button>
-              </div>
-            </td>
-          </tr>
+          {pendataan.map((pendataan) => (
+            <tr key={pendataan.id}>
+              <td>
+                <div className={styles.pendataan}>
+                  <Image src={pendataan.img || "/noimage.png"} alt="Case Image" className={styles.pendataanImage} height={50} width={50} />
+                  {pendataan.casedata?.toString().slice(0, 16)}
+                </div>
+              </td>
+              <td>{pendataan.reporter}</td>
+              <td>{pendataan.date?.toString().slice(4, 16)}</td>
+              <td>{pendataan.address?.toString().slice(0, 25)}</td>
+              <td>
+                <span className={`${styles.status} ${pendataan.status === "Done" ? styles.done : pendataan.status === "Cancelled" ? styles.cancelled : styles.pending}`}>{pendataan.status}</span>
+              </td>
+              <td>
+                <div className={styles.buttons}>
+                  <Link href={`/dashboard/pendataan/${pendataan.id}`}>
+                    <button className={`${styles.view} ${styles.button}`}>View</button>
+                  </Link>
+                  <button className={`${styles.delete} ${styles.button}`}>Done</button>
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={count} />
     </div>
   );
 };
