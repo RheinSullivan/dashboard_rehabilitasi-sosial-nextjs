@@ -8,9 +8,9 @@ export const fecthUser = async (search, pages) => {
 
   try {
     connectToDB();
-    const count = await User.find({ casedata: { $regex: regex } }).countDocuments();
-    const users = await User.find({ casedata: { $regex: regex } })
-      .sort({ isAdmin: -1, casedata: 1 })
+    const count = await User.find({ username: { $regex: regex } }).countDocuments();
+    const users = await User.find({ username: { $regex: regex } })
+      .sort({ isAdmin: -1, username: 1 })
       .limit(itemsPerpages)
       .skip(itemsPerpages * (pages - 1));
     return { users, count };
@@ -32,9 +32,6 @@ export const fecthPendataan = async (search, pages) => {
       .sort({ date: -1 })
       .limit(itemsPerpages)
       .skip(itemsPerpages * (pages - 1));
-
-      console.log("Data fetched from DB:", pendataan);
-
     return { pendataan, count };
   } catch (err) {
     console.log(err);

@@ -15,7 +15,7 @@ const Pendataan = async ({ searchParams }) => {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Search data..." />
-        <Link href="/dashboard/pendataan/test">
+        <Link href="/dashboard/pendataan/add">
           <button className={styles.addButton}>Add Data</button>
         </Link>
       </div>
