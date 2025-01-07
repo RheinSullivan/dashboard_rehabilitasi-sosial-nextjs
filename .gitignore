@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/.backup/
+/.dump/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -20,8 +22,6 @@
 .DS_Store
 *.pem
 
-/backup
-/dump
 
 # debug
 npm-debug.log*

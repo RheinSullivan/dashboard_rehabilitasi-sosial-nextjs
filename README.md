@@ -1,3 +1,6 @@
+Please used a database [MongoDB Atlas](https://www.mongodb.com/) in the .env file use something like this
+`bash MONGO = mongodb+srv://<username>:<password>@<cluster-url>.mongodb.net/<database-name>?retryWrites=true&w=majority`
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
