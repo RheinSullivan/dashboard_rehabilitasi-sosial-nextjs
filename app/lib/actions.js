@@ -53,3 +53,16 @@ export const addPendataan = async (formData) => {
   revalidatePath("/dashboard/pendataan");
   redirect("/dashboard/pendataan");
 };
+
+export const deletePendataan = async (formData) => {
+  const { id } = Object.fromEntries(formData);
+
+  try {
+    connectToDB();
+    await Pendataan.findByIdAndDelete(id);
+  } catch (err) {
+    console.log(err);
+    throw new Error("Gagal untuk menghapus data!");
+  }
+  revalidatePath("/dashboard/pendataan");
+};

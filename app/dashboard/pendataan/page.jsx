@@ -5,6 +5,7 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Link from "next/link";
 import Image from "next/image";
 import { fecthPendataan } from "@/app/lib/data";
+import { deletePendataan } from "@/app/lib/actions";
 
 const Pendataan = async ({ searchParams }) => {
   const search = searchParams?.search || "";
@@ -50,7 +51,10 @@ const Pendataan = async ({ searchParams }) => {
                   <Link href={`/dashboard/pendataan/${pendataan.id}`}>
                     <button className={`${styles.view} ${styles.button}`}>View</button>
                   </Link>
-                  <button className={`${styles.delete} ${styles.button}`}>Done</button>
+                  <form action={deletePendataan}>
+                    <input type="hidden" value={pendataan.id} name="id" />
+                    <button className={`${styles.delete} ${styles.button}`}>Delete</button>
+                  </form>
                 </div>
               </td>
             </tr>

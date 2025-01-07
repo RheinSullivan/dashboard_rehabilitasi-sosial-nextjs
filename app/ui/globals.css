@@ -26,3 +26,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* 
+          <option value="kepalabidang">Kepala Bidang</option>
+          <option value="admin">Admin Website</option>
+          <option value="operator">Operator Pendataan</option>
+          <option value="analisisdata">Tim Analisis Data</option>
+          <option value="layanan">Penerima Layanan</option>
+          <option value="itsupport">IT Support</option>
+          <option value="anggota">Anggota</option>
+          <option value="pengguna">Pengguna/Warga/Peserta</option>
+          "backup": "mongodump --uri mongodb+srv://rheinsullivan:password123456661@cluster0.yz9on.mongodb.net/dashboard --out ./backup" */
